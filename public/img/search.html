@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/index.html">
+</head>
+<body>
+<ul id="myUL">
+        <li><a href="#">Red T-shirt</a></li>
+        <li><a href="#">Gray T-shirt</a></li>
+        <li><a href="#">Green T-shirt</a></li>
+        <li><a href="#">black T-shirt</a></li>
+</ul>
+    <script>
+        const searchbar=()=>{
+        let filter=document.getElementById('myInput').value;
+        let ul= document.getElementById('myUL');
+        let li=ul.getElementsByTagName('li');
+        for(var i=0;i<li.length;i++){
+            let a =li[i].getElementByTagName('a')[0];
+            let textValue=a.textContent;
+        }
+        }
+    </script>
+</body>
+</html>

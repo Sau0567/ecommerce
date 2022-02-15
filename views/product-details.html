@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="/public/style.css">
+    <link rel="stylesheet" href="/public/productstyle.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <div class="navbar">
+                <nav class="navleft v-res-hight ">
+                    <div class="logo v-resp">
+                        <img src="/public/img/logo-b.png" width=125px alt="logo">
+                    </div>
+                    <div class="navright v-resp">
+                        <input type="text" class="search-box" placeholder="search" name="search">
+                        <button class=" btn-sm">Search</button>
+                    </div>
+                    <ul class="list list-pro v-resp" id="menuitems">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/product-details">Products</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="/">Register</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                    <img src="/public/img/cart.png" alt="cart" width="25px" height="25px" class="v-resp">
+                    <select class="short-list">
+                        <option>sort by price</option>
+                        <option>sort by ratings</option>
+                        <option>sort by sale</option>
+                        <option>sort by popularity</option>
+                    </select>
+                    <div class="burger">
+                        <div class="line" onclick="menutoggle()"></div>
+                        <div class="line" onclick="menutoggle()"></div>
+                        <div class="line" onclick="menutoggle()"></div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="sm-category ">
+        <div class="row">
+            <div class="col-2 ">
+                <img src="/public/img/product-e.png" width="100%" id="productImg">
+                <div class="small-row">
+                    <div class="small-img" >
+                <img src="/public/img/product-a.png" class="smallImg" width="60%">
+                    </div>
+                    <div class="small-img">
+                        <img src="/public/img/product-b.png"   class="smallImg" width="60%">
+                    </div>
+                    <div class="small-img">
+                        <img src="/public/img/product-c.png"   class="smallImg" width="60%">
+                    </div>
+                    <div class="small-img">
+                        <img src="/public/img/product-d.png"  class="smallImg"  width="60%">
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 col-7">
+                <h1>Green T-shirt <br>from Nick</h1>
+                <h4>$60</h4>
+                <select class="select">
+                    <option>Size</option>
+                    <option>XXL</option>
+                    <option>XX</option>
+                    <option>M</option>
+                    <option>S</option>
+                </select>
+                <input type="number" value="1" class="quantity">
+                <a href="" class="btn"> Add Cart</a>
+                <h2>About Product</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, sapiente.</p>
+            </div>
+        </div>
+    </div>
+  
+
+   <script>
+       var productImg = document.getElementById("productImg");
+       var smallImg = document.getElementsByClassName("smallImg");
+       
+       smallImg[0].onclick = function()
+       {
+         productImg.src=smallImg[0].src
+       }
+       smallImg[1].onclick = function()
+       {
+         productImg.src=smallImg[1].src
+       }
+       smallImg[2].onclick = function()
+       {
+         productImg.src=smallImg[2].src
+       }
+       smallImg[3].onclick = function()
+       {
+         productImg.src=smallImg[3].src
+       }
+
+   </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,361 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Josefin+Sans:ital,wght@1,300&display=swap'); */
+body{
+    font-family: 'Dancing Script', cursive;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#header{
+    background:radial-gradient(#fff,green) ;
+}
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding: 10px 25px;
+}
+.navbar{
+    margin-top: -21px;
+}
+.navleft{
+        display: flex;
+        align-items: center;
+        padding: 20px;
+    }
+    .btn-sm{
+        border-radius: 8px;
+        width: 57px;
+    }
+    .search-box{
+        margin-left: 23px;
+        border-radius: 10px;
+        height: 23px;
+        outline: none;
+    }
+ .list   {
+    flex: 1;
+    text-align: right;
+    list-style: none;
+    display: inline-block;
+    margin-bottom: 50px;
+    /* overflow: hidden; */
+}
+.list li{
+    display: inline-block;
+    padding: 4px;
+    margin: 15px;
+
+}
+.short-list{
+    margin-left: 12px;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: red;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.category{
+    margin: 70px 0px;
+}
+.sm-category{
+    max-width: 1140px;
+    margin: auto;
+    padding: 25px;
+}
+.col-1 h1{
+    margin-top: 31px;
+}
+
+.col-2{
+    flex-basis: 50%;
+    /* display: flex; */
+}
+.col-2 img{
+    max-width: 100%;
+    /* border: 2px solid #c3bbf5; */
+    border-radius: 5px;
+    opacity: 0.7;
+
+} 
+.btn{
+    display: inline-block;
+    background: #ff532b;
+    color: #fff;
+    border-radius: 30px;
+    padding: 8px 30px;
+    margin: 30px 0;
+    transition: 0.5s;
+
+}
+.btn:hover{
+    background: #998fe8;
+}
+#header .row{
+    margin-top: 70px;
+}
+.col-3{
+    flex-basis: 26%;
+    min-width: 250px;
+    margin-bottom: 30px;
+    
+}
+.col-3 img{
+    width: 85%; 
+}
+.title{
+    text-align: center;
+    position: relative;
+    line-height: 60px;
+    margin: 0 auto 20px;
+    color: #555;
+}
+.title::after{
+    content: "";
+    background: orange;
+    position: absolute;
+    width: 80px;
+    height: 5px;
+    left: 46%;
+    border-radius: 6px;
+    height: 5px;
+    bottom: 8px;
+    /* line-height: -23px; */
+    /* transform: translateX(-15%);*/
+
+}
+.col-4{
+    flex-basis: 25%;
+    min-width: 200px;
+    margin-bottom: 30px;
+    transition:  0.5s;
+}
+.col-4:hover{
+    transform: translateY(-5px);
+}
+.col-4 img{
+    width: 85%;
+}
+.rating .fa{
+    color: orange;
+}
+.offer{
+        background: radial-gradient(rgb(181, 241, 181),white);
+        margin-top: 80px;
+        padding: 54px;
+        /* max-width: 1080px; */
+}
+.offer-img{
+    padding: 75px;
+}
+/* .testimony{
+    padding-top: 75px;
+}  */
+.testimony .col-3{
+   /* text-align: center; 
+     padding: 40px 20px;
+    box-shadow: 0  0  20px  0  rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.5s; */
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    padding: 40px 20px;
+    
+}
+.testimony{
+    margin-top: 37px;
+}
+.testimony .col-3:hover{
+    transform: translateY(-10px);
+}
+.testimony .col-3 img{
+    /* margin-top: 15px;
+    width: 20%;
+    border-radius: 50%; */
+    width: 25%;
+    border-radius: 33px;
+    margin-top: 40px;
+    transition: 0.5s;
+}
+.testimony .col-3 p{
+    font-size: 16px;
+    color: #777;
+    margin: 12px 0;
+}
+#footer{
+    background: black;
+    color: white;
+    padding: 60px 0 20px;
+}
+.footer-1{
+    flex-basis: 27%;
+    text-align: inherit;
+    flex: 1;
+}
+.footer-1 img{
+width: 44%;
+}
+.footer-2{
+    flex: 3;
+    margin-left: 122px;
+} 
+.logo-app img{
+    width: 27%;
+}
+.footer-3{
+    flex: 1;
+}
+.line{
+    width: 25px;
+    height: 3px;
+    background: #ec0e42;
+    margin: 4px 7px;
+    display: none;
+}
+.footer-4{
+    text-align: center;
+}
+footer{
+    margin-top: 60px;
+    background-color: #000;
+    color: #fff;
+    font-size: 17px;
+    padding: 60px 0 20px;
+}
+.footer ul{
+list-style:  none;
+}
+.footer .col-5{
+    text-align: center;
+}
+ .col-5 a{
+text-decoration: none;
+color: #8a8a8a;
+}
+
+  @media only screen and (max-width:700px){
+    .list {
+        position: absolute;
+        top: 162px;
+        left: 0;
+        width: 100%;
+        /* background: #333; */
+        text-align: center;
+    }
+    .list li{
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px; 
+    }
+    .list li a{
+    font-size: 20px;
+    margin-left: 35px;
+    color:red
+    }
+    .navleft{
+        justify-content: center;
+        flex-direction: column;
+    }
+    .line{
+        display: block;
+    }
+    .navbar{
+        height: 303px;
+    }
+    .btn{
+        margin: 30px 71px;
+       }
+}
+@media only screen and (max-width:400px){
+   
+    .list{
+        overflow: hidden;
+        transition: max-height 0.9s;
+       }
+       .row{
+        text-align: center;
+       }
+       .col-2, .col-3,.col-4{
+           flex-basis: 100%;
+       }
+     
+}
+
+ /* ..................login page css............................................. */
+
+ .login-form{
+     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+     /* box-shadow: 0 0 20px 0 rgb(0 0 0 / 10%); */
+     background: #fff;
+     width: 300px;
+     height: 400px;
+     margin: auto;
+     text-align: center;
+     position: relative;
+     /* transition: 1s; */
+     overflow: hidden;
+ }
+ .login-form form{
+    transition: 1s;
+ }
+
+ .loginn{
+    max-width: 300px;
+    padding: 0px 20px;
+     position: absolute;
+    top: 140px; 
+ }
+  form input{
+    width: 100%;
+    height: 30px;
+    margin: 10px 0px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+ }
+ .login{
+    background:radial-gradient(#fff, pink) ;
+ }
+ /* .logreg{
+    /* position: relative; */
+    /* line-height: 50px; */
+ /* } */
+ .logreg span{
+    font-weight: bold;
+    padding: 0 10px;
+    width: 100px;
+    display: inline-block;
+ }
+ /* .logreg::after{
+     width: 60px;
+     height: 6px;
+     content: " ";
+     background: orange;
+     position: absolute;
+     bottom: 6px;
+     left: 38%; 
+ }*/
+ #indicator{
+    width: 100px;
+    height: 4px;
+    background: orange;
+    margin-top: 8px;
+    border: none;
+    transform: translateX(145px);
+    transition: 1s;
+ }
+
+ 
+ #logpage{
+     left: -300px;
+ }
+#regpage{
+    left: 0px;
+}

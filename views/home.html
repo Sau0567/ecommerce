@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estore</title>
+    <link rel="stylesheet" href="/public/style.css">
+    <link rel="stylesheet" href="/index.js">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/search.html">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <div class="navbar">
+                <nav class="navleft v-res-hight ">
+                    <div class="logo v-resp">
+                        <img src="/public/img/logo-b.png" width=125px alt="logo">
+                    </div>
+                    <div class="navright v-resp">
+                        <input type="text"id="myInput" autocomplete="off"  class="search-box" placeholder="" name=""
+                        onkeyup="searchbar()">
+                        <button class=" btn-sm">Search</button>
+                    </div>
+                    <ul class="list v-resp" id="menuitems">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/product-details">Products</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="/register">Register</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                    <img src="/public/img/cart.png" alt="cart" width="25px" height="25px" class="v-resp">
+                    <select class="short-list">
+                        <option>sort by price</option>
+                        <option>sort by ratings</option>
+                        <option>sort by sale</option>
+                        <option>sort by popularity</option>
+                    </select>
+                    <div class="burger">
+                        <div class="line"  onclick ="menutoggle()"></div>
+                        <div class="line" onclick="menutoggle()"></div>
+                        <div class="line" onclick="menutoggle()"></div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="row">
+                <div class="col-1">
+                    <h1>Give Your Workout <br> A New Style!</h1>
+                    <p>success is not always about greatness</p>
+                    <a href="" class="btn">Explore Now &#x2192;</a>
+                </div>
+                <div class="col-2">
+                    <img src="/public/img/imagebg.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="category">
+        <div class="sm-category">
+            <h2 class="title">Featured Category</h2>
+            <div class="row">
+                <div class="col-3">
+                    <img src="/public/img/category-a.jpg">
+                </div>
+                <div class="col-3">
+                    <img src="/public/img/category-b.jpg">
+                </div>
+                <div class="col-3">
+                    <img src="/public/img/category-c.jpg">
+                </div>
+                <!-- <div class="col-3">
+                    <img src="/img/category-3.jpg">
+                </div> -->
+
+            </div>
+        </div>
+    </div>
+
+    <div  class="sm-category">
+        <h2 class="title">Featured Products</h2>
+        <div class="row">
+            <div class="col-4">
+                <img src="/public/img/product-a.png" alt="">
+                <h4>Red T-shirt</h4>
+                <div class="rating">
+
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$50,000</p>
+            </div>
+            <div class="col-4">
+                <img src="/public/img/product-b.png" alt="">
+                <h4><%= data.name %></h4>
+                <div class="rating">
+
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$<%= data.amount %></p>
+            </div>
+            <div class="col-4">
+                <img src="/public/img/product-e.png" alt="">
+                <h4>Green T-shirt</h4>
+                <div class="rating">
+
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$102,000</p>
+            </div>
+            <div class="col-4">
+                <img src="/public/img/product-g.png" alt="">
+                <h4>black T-shirt</h4>
+                <div class="rating">
+
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$40,000</p>
+            </div>
+        </div>
+        <h2 class="title">Latest Products</h2>
+        <div id="latest" class="row">
+            <!-- <a href="#">Shoes -->
+                <div class="col-4">
+                    <img src="/public/img/product-n.jpg" alt="">
+                    <h4>Shoes</h4>
+                    <div class="rating">
+    
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                    </div>
+                    <p>$50,000</p>
+                </div>
+            <!-- </a> -->
+            <!-- <a href="#">Sliver -->
+                <div class="col-4">
+                    <img src="/public/img/product-l.jpg" alt="">
+                    <h4>Sliver T-shirt</h4>
+                    <div class="rating">
+    
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                    </div>
+                    <p>$55,000</p>
+                </div>
+            <!-- </a> -->
+            <div class="col-4">
+                <img src="/public/img/product-7.jpg" alt="">
+                <h4>Socks</h4>
+                <div class="rating">
+
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$102,000</p>
+            </div>
+            <div class="col-4">
+                <img src="/public/img/product-8.jpg" alt="">
+                <h4>Watch</h4>
+                <div class="rating">
+
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$40,000</p>
+            </div>
+            </div>
+             <div class="row">
+            <div class="col-4">
+                <img src="/public/img/product-9.jpg" alt="">
+                <h4> yell Watch</h4>
+                <div class="rating">
+
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$50,000</p>
+            </div>
+            <div class="col-4">
+                <img src="/public/img/product-o.jpg" alt="">
+                <h4>Sandels</h4>
+                <div class="rating">
+
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$55,000</p>
+            </div>
+            <div class="col-4">
+                <img src="/public/img/product-11.jpg" alt="">
+                <h4>Gray shoes</h4>
+                <div class="rating">
+
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$102,000</p>
+            </div>
+            <div class="col-4">
+                <img src="/public/img/product-12.jpg" alt="">
+                <h4>Pants</h4>
+                <div class="rating">
+
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$45,000</p>
+            </div>
+        </div>
+    </div>
+    <div class="offer">
+        <div class="sm-category">
+            <div class="row">
+                <div class="col-2">
+                    <img src="/public/img/exclusivee.png" alt="player" class="offer-img">
+                </div>
+                <div class="col-2">
+                    <h2>offer! offer! offer!</h2>
+                    <h3>Discount 50%</h3>
+                    <h1> Smart Band SE 4</h1>
+                    <p>Exclusivly available for Limited Time! </p>
+                    <a href="" class="btn">Buy Now &#x2192;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="testimony">
+        <div class="sm-category">
+            <div class="row">
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p>Lorem ipsum dolor sit amet consectderit Lorem ipsum
+                        dolor sit amet consectetur.!</p>
+                    <div class="rating">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                    </div>
+                    <img src="/public/img/user-a.jpg">
+                    <h3>Sean Paul</h3>
+                </div>
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p>Lorem ipsum dolor sit amet consecte ipsum
+                        dolor sit, amet consectet elit. Pariatur, dolore.</p>
+                    <div class="rating">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                    </div>
+                    <img src="/public/img/user-5.jpg">
+                    <h3>Sean Paul</h3>
+                </div>
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p>Lorem ipsum dolor sit amet consectetu sit amet
+                        consectetur adipisicing prehenderit!</p>
+                    <div class="rating">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                    </div>
+                    <img src="/public/img/user-1.png" alt="">
+                    <h3>Sean Paul</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-1">
+                    <img src="/public/img/logo-a.png" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                </div>
+                <div class="footer-2">
+                    <h3>Download App</h3>
+                    <p>Download for Android and IOS. </p>
+                    <div class="logo-app">
+                        <img src="/public/img/play-store.png" alt="">
+                        <img src="/public/img/app-store.png" alt="">
+                    </div>
+                </div>
+                <div class="footer-3">
+                    <h3>Useful links</h3>
+                    <ul>
+                        <li>coupons</li>
+                        <li>Blog post</li>
+                        <li>Return policy</li>
+                        <li>Home page</li>
+                    </ul>
+                </div>
+                <div class="footer-3">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>facebook</li>
+                        <li>instagram</li>
+                        <li>twitter</li>
+                        <li>youtube</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="footer-4">CopyRight of Estore - 1999 Is Reserved</p>
+    </div>
+    <script>
+        var menuitems = document.getElementById("menuitems");
+        menuitems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (menuitems.style.maxHeight == "0px") {
+                menuitems.style.maxHeight = "400px"
+
+            }
+            else {
+                menuitems.style.maxHeight = "0px"
+            }
+        }
+        function searchbar(){
+            var input =document.getElementById("myInput")
+            var filter = input.value.toUpperCase();
+            var latest = document.getElementById("latest");
+            var li =latest.getElementsByClassName("col-4")
+            // console.log(li[0)
+            for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("h4")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+        }
+        </script>
+</body>
+
+</html>

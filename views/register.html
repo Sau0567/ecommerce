@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/public/style.css">
+    <link rel="stylesheet" href="/public/productstyle.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <div class="navbar">
+                <nav class="navleft v-res-hight ">
+                    <div class="logo v-resp">
+                        <img src="/public/img/logo-b.png" width=125px alt="logo">
+                    </div>
+                    <div class="navright v-resp">
+                        <input type="text" class="search-box" placeholder="search" name="search">
+                        <button class=" btn-sm">Search</button>
+                    </div>
+                    <ul class="list list-pro v-resp" id="menuitems">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="">Products</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="/register">Register</a></li>
+                        <li><a href="">Account</a></li>
+                    </ul>
+                    <img src="/public/img/cart.png" alt="cart" width="25px" height="25px" class="v-resp">
+                    <div class="burger">
+                        <div class="line" onclick="menutoggle()"></div>
+                        <div class="line" onclick="menutoggle()"></div>
+                        <div class="line" onclick="menutoggle()"></div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="login">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="/public/img/imagebg.jpg" alt="">
+                </div>
+                 <div class="col-2">
+                    <div class="login-form">
+                        <div class="logreg">
+                            <!-- <span onclick="login()">login </span> -->
+                            <span onclick="register()">Register </span>
+                            <!-- <hr id="indicator">  -->
+                        </div>
+                        <!-- <form action="/login" method="POST" class="loginn"  id="logpage">
+                            <input type="text" autocomplete="off" name="myname" placeholder="User name">
+                            <input type="password" autocomplete="off" name="mypass" placeholder="password">
+                            <button  type="submit" class="btn">Submit</button>
+                            <a href="">Forgot password</a>
+                        </form> -->
+
+                         <form action="/register" method="POST" class="regis loginn"  id="regpage">
+                            <input type="text" autocomplete="off" name="myname" placeholder="User name">
+                            <input type="email" autocomplete="off" name="myemail" placeholder="email">
+                            <input type="password" autocomplete="off" name="mypass" placeholder="password">
+                            <button  type="submit"class="btn">Register</button>
+                            
+                        </form>
+                                
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-1">
+                    <img src="/public/img/logo-a.png" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                </div>
+                <div class="footer-2">
+                    <h3>Download App</h3>
+                    <p>Download for Android and IOS. </p>
+                    <div class="logo-app">
+                        <img src="/public/img/play-store.png" alt="">
+                        <img src="/public/img/app-store.png" alt="">
+                    </div>
+                </div>
+                <div class="footer-3">
+                    <h3>Useful links</h3>
+                    <ul>
+                        <li>coupons</li>
+                        <li>Blog post</li>
+                        <li>Return policy</li>
+                        <li>Home page</li>
+                    </ul>
+                </div>
+                <div class="footer-3">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>facebook</li>
+                        <li>instagram</li>
+                        <li>twitter</li>
+                        <li>youtube</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="footer-4">CopyRight of Estore - 1999 Is Reserved</p>
+    </div>
+    <script>
+        let logpage = document.getElementById("logpage");
+        let regpage=document.getElementById("regpage");
+        let indicator=document.getElementById("indicator");
+
+        let register = () =>{
+            regpage.style.transform= "translateX(0px)";
+            logpage.style.transform= "translateX(0px)";
+            indicator.style.transform= "translateX(145px)";
+
+        }
+        let login = () =>{
+            regpage.style.transform="translateX(300px)";
+            logpage.style.transform="translateX(300px)";
+            indicator.style.transform= "translateX(40px)";
+
+        }
+
+
+    </script>
+</body>
+</html>
